@@ -1,0 +1,41 @@
+// Медиа выражения
+@mixin laptop {
+  @media screen and (max-width: $desktop-width) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (max-width: $laptop-width - 1px) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media screen and (max-width: $tablet-width - 1px) {
+    @content;
+  }
+}
+
+// Шрифты
+@mixin font($font: $font_regular) {
+
+  //Giroy
+  @if $font == Giroy {
+    font-family: 'Giroy', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  @if $font == Giroy-b {
+    font-family: 'Giroy', sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+
+  @if $font == Nekst-Black {
+    font-family: 'Nekst-Black', sans-serif;
+    font-weight: 900;
+    font-style: normal;
+  }
+}

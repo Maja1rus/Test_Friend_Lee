@@ -1,7 +1,8 @@
-
 // Base
-@import "./base/base.scss";
 @import "./base/fonts";
 @import "./base/variables";
+@import "./base/mixin";
+@import "./base/base";
 
 // Blocks
+@import "./blocks/header";

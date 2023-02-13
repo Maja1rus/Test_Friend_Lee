@@ -1,55 +1,44 @@
 html {
-    box-sizing: border-box;
-    height: 100%;
+  box-sizing: border-box;
+  height: 100%;
 }
 
 *::before,
 *::after {
-    box-sizing: inherit;
+  box-sizing: inherit;
 }
 
 body {
-    padding: 0;
-    margin: 0;
-
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-
-    font-family: var(--font-gothampro);
-    font-size: var(--size-normal);
-    line-height: 1.2;
-    color: var(--color-black);
-    font-weight: var(--font-regular);
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 main {
-    flex-grow: 1;
+  flex-grow: 1;
 }
 
 footer {
-    flex-shrink: 0;
-}
-
-.modal-open {
-    overflow: hidden;
-    background-color: var(--color-dark-gray);
+  flex-shrink: 0;
 }
 
 .container {
-    max-width: 1218px;
-    padding-left: 10px;
-    padding-right: 10px;
-    margin: 0 auto;
-}
-
-.section {
-    padding-top: 60px;
-    padding-bottom: 60px;
+  max-width: 1440px;
+  padding-left: 47px;
+  padding-right: 49px;
+  margin: 0 auto;
 }
 
 img {
-    display: block;
-    max-width: 100%;
-    height: auto;
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.black {
+  @include font($font_black);
+  font-size: 54px;
+  line-height: 90%;
 }
