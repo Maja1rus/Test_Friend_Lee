@@ -1,5 +1,6 @@
 import {inputRange} from "./modules/input-range.js";
 import {toInteger} from "./modules/toInteger.js";
+import {submitForm} from "./modules/submit-form.js";
 
 const wrapRange = document.querySelector('[data-js="calculator-range"]');
 
@@ -22,6 +23,16 @@ try {
         range.forEach(item => {
             inputRange(wrapRange, item)
         })
+    }
+} catch (error) {
+    console.log(error);
+}
+
+// Отправка данных
+try {
+    const btnSend = wrapRange.querySelector('[data-js="btn-send"]');
+    if (btnSend) {
+        submitForm(wrapRange, btnSend)
     }
 } catch (error) {
     console.log(error);
