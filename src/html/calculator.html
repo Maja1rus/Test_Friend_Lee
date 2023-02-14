@@ -4,14 +4,15 @@
             Рассчитайте стоимость автомобиля в&nbsp;лизинг
         </h1>
         <div class="calculator__wrap">
-            <form class="calculator__form">
-                <div class="calculator__range" data-js="calculator-range">
+            <form class="calculator__form" data-js="calculator-range">
+                <div class="calculator__range">
                     @@include('input-range.html', {
                         "title": "Стоимость автомобиля",
                         "min": "1500000",
                         "max": "10000000",
                         "value": "3300000",
                         "rub": "₽",
+                        "data-js-range": "cost",
                     })
                     @@include('input-range.html', {
                         "title": "Первоначальный взнос",
@@ -20,6 +21,7 @@
                         "value": "420000",
                         "rub": "₽",
                         "label": "13%",
+                        "data-js-range": "first",
                     })
                     @@include('input-range.html', {
                         "title": "Срок лизинга",
@@ -27,6 +29,7 @@
                         "max": "120",
                         "value": "60",
                         "description": "мес.",
+                        "data-js-range": "month",
                     })
                 </div>
                 <div class="calculator__bottom">
@@ -36,7 +39,7 @@
                                 Сумма договора лизинга
                             </span>
                             <span class="calculator__price black">
-                                <span>4 467 313</span>
+                                <span data-js="contract-cost">4 467 313</span>
                                 <span class="calculator__symbol">₽</span>
                             </span>
                         </div>
@@ -45,7 +48,7 @@
                                 Ежемесячный платеж от
                             </span>
                             <div class="calculator__price black">
-                                <span>114 455</span>
+                                <span data-js="month-cost">114 455</span>
                                 <span class="calculator__symbol">₽</span>
                             </div>
                         </div>

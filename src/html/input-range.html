@@ -3,7 +3,11 @@
 		@@title
 	</span>
 	<div class="input-range__value">
-		<span class="input-range__price" data-js="range__value">
+		<span class="input-range__price"
+			  data-js="range__value"
+			  data-js-range=@@data-js-range
+			  data-js-count=@@value
+		>
 			@@value
 		</span>
 		@@if(context.rub) {
