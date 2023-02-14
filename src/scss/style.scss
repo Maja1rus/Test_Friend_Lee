@@ -3,6 +3,9 @@
 @import "./base/variables";
 @import "./base/mixin";
 @import "./base/base";
+@import "./base/button";
 
 // Blocks
-@import "./blocks/header";
+@import "./blocks/calculator";
+@import "./blocks/input-range";
+@import "./blocks/tc-range-slider";

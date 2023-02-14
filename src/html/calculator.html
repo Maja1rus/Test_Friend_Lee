@@ -1,8 +1,60 @@
-<section class="calculator container">
-    <h1 class="h1 black">
-        Рассчитайте стоимость автомобиля в лизинг
-    </h1>
-    <div class="calculator__wrap">
-
+<section class="calculator ">
+    <div class="container">
+        <h1 class="h1 black">
+            Рассчитайте стоимость автомобиля в&nbsp;лизинг
+        </h1>
+        <div class="calculator__wrap">
+            <form class="calculator__form">
+                <div class="calculator__range" data-js="calculator-range">
+                    @@include('input-range.html', {
+                        "title": "Стоимость автомобиля",
+                        "min": "1500000",
+                        "max": "10000000",
+                        "value": "3300000",
+                        "rub": "₽",
+                    })
+                    @@include('input-range.html', {
+                        "title": "Первоначальный взнос",
+                        "min": "100000",
+                        "max": "2600000",
+                        "value": "420000",
+                        "rub": "₽",
+                        "label": "13%",
+                    })
+                    @@include('input-range.html', {
+                        "title": "Срок лизинга",
+                        "min": "6",
+                        "max": "120",
+                        "value": "60",
+                        "description": "мес.",
+                    })
+                </div>
+                <div class="calculator__bottom">
+                    <div class="calculator__cost">
+                        <div class="calculator__cost-item">
+                            <span class="calculator__text">
+                                Сумма договора лизинга
+                            </span>
+                            <span class="calculator__price black">
+                                <span>4 467 313</span>
+                                <span class="calculator__symbol">₽</span>
+                            </span>
+                        </div>
+                        <div class="calculator__cost-item">
+                            <span class="calculator__text">
+                                Ежемесячный платеж от
+                            </span>
+                            <div class="calculator__price black">
+                                <span>114 455</span>
+                                <span class="calculator__symbol">₽</span>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit" class="calculator__button button loading">
+                        Оставить заявку
+                    </button>
+                </div>
+            </form>
+        </div>
     </div>
 </section>

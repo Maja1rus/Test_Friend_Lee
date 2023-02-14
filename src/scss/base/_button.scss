@@ -1,0 +1,91 @@
+.button {
+  @include font($font_black);
+  width: 100%;
+  max-width: 426px;
+  padding-top: 17px;
+  padding-bottom: 15px;
+  font-size: 30px;
+  line-height: 36px;
+  color: #fff;
+  background-color: $color-orange;
+  border: none;
+  border-radius: 40px;
+  transition: background-color 0.3s ease-in-out;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $color-black;
+  }
+
+  &:active {
+    background-color: $color-gray;
+  }
+
+  &:disabled {
+    background: rgba(255, 149, 20, 0.4);
+
+    &:hover {
+      background: rgba(255, 149, 20, 0.4);
+    }
+  }
+
+
+  &.loading {
+    position: relative;
+    animation: disable_button 3s ease-in;
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url("../img/circle.svg");
+      background-size: auto 75%;
+      background-position: center;
+      background-repeat: no-repeat;
+      z-index: 3;
+      opacity: 0;
+      animation: loading 3s ease-in;
+    }
+  }
+}
+
+
+@keyframes disable_button {
+  0% {
+    pointer-events: none;
+    font-size: 0;
+  }
+
+  100% {
+    pointer-events: none;
+    font-size: 0;
+  }
+}
+
+@keyframes loading {
+  0% {
+    opacity: 1;
+    transform: rotate(0);
+  }
+
+  95% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: rotate(180deg);
+  }
+}
+
+@include mobile {
+
+  .button {
+    font-size: 22px;
+    line-height: 20px;
+    max-width: 280px;
+    padding: 21px 0 19px;
+  }
+}

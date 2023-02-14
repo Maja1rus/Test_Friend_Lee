@@ -1,0 +1,33 @@
+<div class="input-range" data-js="range-input">
+	<span class="input-range__title">
+		@@title
+	</span>
+	<div class="input-range__value">
+		<span class="input-range__price" data-js="range__value">
+			@@value
+		</span>
+		@@if(context.rub) {
+			<span class="input-range__rub">
+				@@rub
+			</span>
+		}
+		@@if(context.description) {
+			<span class="input-range__description">
+				@@description
+			</span>
+		}
+		@@if(context.label) {
+			<span class="input-range__label" data-js="range__percent">
+				@@label
+			</span>
+		}
+	</div>
+	<tc-range-slider class="input-range__slider"
+		data-js="range__slider"
+		min="@@min"
+		max="@@max"
+		value="@@value"
+		css-links="css/style.min.css"
+	>
+	</tc-range-slider>
+</div>

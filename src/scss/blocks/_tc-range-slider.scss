@@ -1,0 +1,52 @@
+:host {
+  --width: 427px !important;
+  --height: 2px !important;
+  --panel-bg: #E1E1E1 !important;
+  --pointer-width: 20px !important;
+  --pointer-height: 20px !important;
+  --panel-bg-fill: #FF9514 !important;
+  --pointer-bg: #FF9514 !important;
+  --pointer-border: none !important;
+  --pointer-shadow: none !important;
+  --pointer-bg-hover: #FF9514 !important;
+  --pointer-bg-focus: #FF9514!important;
+  --pointer-border-focus: none !important;
+  --pointer-shadow-focus: none !important;
+  --pointer-border-hover: none !important;
+  --pointer-shadow-hover: none !important;
+}
+
+.range-slider {
+  display: flex;
+  justify-content: center;
+  max-width: calc(100% - 48px) !important;
+  margin: 0 auto;
+  margin-top: -2px;
+
+  .container {
+    text-align: center;
+    max-width: 100%;
+    padding: 0;
+  }
+}
+
+.input-range__slider {
+
+  .row {
+    padding: 0;
+  }
+}
+
+@include laptop {
+
+  :host {
+    --width: 320px !important;
+  }
+}
+
+@include tablet {
+
+  :host {
+    --width: 696px !important;
+  }
+}
