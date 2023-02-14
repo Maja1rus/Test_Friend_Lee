@@ -5,24 +5,24 @@ import {monthCost} from "./month-cost.js";
 import {contractCost} from "./contract-cost.js";
 export function inputRange(wrapRange, range) {
 
-    const $slider = range.querySelector('[data-js="range__slider"]');
+    const slider = range.querySelector('[data-js="range__slider"]');
     const $value = range.querySelector('[data-js="range__value"]');
 
-    $slider.addEventListener('change', (e) => {
+    slider.addEventListener('change', (e) => {
         // Обновление данных в data-js-count
         const cost = wrapRange.querySelector('[data-js-range="cost"]').getAttribute('data-js-count');
         const first = wrapRange.querySelector('[data-js-range="first"]').getAttribute('data-js-count');
         const month = wrapRange.querySelector('[data-js-range="month"]').getAttribute('data-js-count');
-        let value = Math.round(e.detail.value)
+        let value = Math.round(e.detail.value);
 
-        // Обновление перменных input range
-        inputRangeValue(value)
+        // Обновление перменных input-range
+        inputRangeValue(value);
         // Подсчёт процентов
-        percentFn(wrapRange)
+        percentFn(wrapRange);
         // Подсчёт ежемесячного платежа
-        monthCost(wrapRange, cost, first, month)
+        monthCost(wrapRange, cost, first, month);
         // Подсчёт дорогова лизина
-        contractCost(wrapRange, first, month)
+        contractCost(wrapRange, first, month);
     });
 
     function inputRangeValue(value) {
