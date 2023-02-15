@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="refresh" content="0; URL=/dist/index.html" />
+    <link rel="stylesheet" href="css/style.min.css">
+    <title>Тестовое задание от Дениса Налимова</title>
+</head>
+
+<body>
+    <main>
+        <section class="calculator ">
+    <div class="container">
+        <h1 class="h1 black">
+            Рассчитайте стоимость автомобиля в&nbsp;лизинг
+        </h1>
+        <div class="calculator__wrap">
+            <form class="calculator__form" data-js="calculator-range">
+                <div class="calculator__range">
+                    <div class="input-range" data-js="range-input">
+	<span class="input-range__title">
+		Стоимость автомобиля
+	</span>
+	<div class="input-range__value">
+		<span class="input-range__price"
+			  data-js="range__value"
+			  data-js-range=cost
+			  data-js-count=3300000
+		>
+			3300000
+		</span>
+		
+			<span class="input-range__rub">
+				₽
+			</span>
+		
+		
+		
+	</div>
+	<tc-range-slider class="input-range__slider"
+	    data-js="range__slider"
+		min="1500000"
+		max="10000000"
+		value="3300000"
+		css-links="css/style.min.css"
+	>
+	</tc-range-slider>
+</div>
+                    <div class="input-range" data-js="range-input">
+	<span class="input-range__title">
+		Первоначальный взнос
+	</span>
+	<div class="input-range__value">
+		<span class="input-range__price"
+			  data-js="range__value"
+			  data-js-range=first
+			  data-js-count=420000
+		>
+			420000
+		</span>
+		
+			<span class="input-range__rub">
+				₽
+			</span>
+		
+		
+		
+			<span class="input-range__label" data-js="range__percent">
+				13%
+			</span>
+		
+	</div>
+	<tc-range-slider class="input-range__slider"
+	    data-js="range__slider"
+		min="100000"
+		max="2600000"
+		value="420000"
+		css-links="css/style.min.css"
+	>
+	</tc-range-slider>
+</div>
+                    <div class="input-range" data-js="range-input">
+	<span class="input-range__title">
+		Срок лизинга
+	</span>
+	<div class="input-range__value">
+		<span class="input-range__price"
+			  data-js="range__value"
+			  data-js-range=month
+			  data-js-count=60
+		>
+			60
+		</span>
+		
+		
+			<span class="input-range__description">
+				мес.
+			</span>
+		
+		
+	</div>
+	<tc-range-slider class="input-range__slider"
+	    data-js="range__slider"
+		min="6"
+		max="120"
+		value="60"
+		css-links="css/style.min.css"
+	>
+	</tc-range-slider>
+</div>
+                </div>
+                <div class="calculator__bottom">
+                    <div class="calculator__cost">
+                        <div class="calculator__cost-item">
+                            <span class="calculator__text">
+                                Сумма договора лизинга
+                            </span>
+                            <span class="calculator__price black">
+                                <span data-js="contract-cost" data-js-count=4467313>4 467 313</span>
+                                <span class="calculator__symbol">₽</span>
+                            </span>
+                        </div>
+                        <div class="calculator__cost-item">
+                            <span class="calculator__text">
+                                Ежемесячный платеж от
+                            </span>
+                            <div class="calculator__price black">
+                                <span data-js="month-cost" data-js-count=114455>114 455</span>
+                                <span class="calculator__symbol">₽</span>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit" class="calculator__button button loading" data-js="btn-send">
+                        Оставить заявку
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+    </main>
+    <script src="js/app.min.js"></script>
+</body>
+
+</html>
